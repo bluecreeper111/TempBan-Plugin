@@ -1,0 +1,11 @@
+main: com.bluecreeper111.tempban.TempBan
+name: TempBan
+description: Basic temporary banning plugin.
+version: 1.0
+commands:
+  tempban:
+    description: Temporarily ban a player from the server.
+    usage: /<command>
+  unban: 
+    description: Unban a banned player.
+    usage: /<command>
