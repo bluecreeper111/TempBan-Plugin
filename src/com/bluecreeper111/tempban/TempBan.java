@@ -100,9 +100,9 @@ public class TempBan extends JavaPlugin implements CommandExecutor {
 	}
 
 	/*
-	 * Code run when a command is submitted on the server Typically for large
-	 * plugins, developers will make seperate classes for each command But on a
-	 * small plugin such as this one we will just include them in our main class
+	 * Code run when a command is submitted on the server 
+	 * Typically for large plugins, developers will make seperate classes for each command 
+	 * But on a small plugin such as this one we will just include them in our main class
 	 */
 	public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
 		// BanList for our ban commands
@@ -114,18 +114,17 @@ public class TempBan extends JavaPlugin implements CommandExecutor {
 				return true;
 			}
 			/*
-			 * First, we check if the user submitted the correct amount of arguments.
-			 * (/tempban <user> <time>) We will make sure there is two or more arguments, so
-			 * we know they specify a player and at least one time unit
+			 * First, we check if the user submitted the correct amount of arguments. (/tempban <user> <time>)
+			 * We will make sure there is two or more arguments, so we know they specify a player and at least one time
 			 */
 			if (args.length >= 2) {
 				// Now, we double check the player they specify actually exists
 				OfflinePlayer target = this.getOfflinePlayer(args[0]);
 				if (target != null) {
 					/*
-					 * The next thing we have to check is if they provided a valid time. We will use
-					 * a method above to determine the time based on integers and units Example of
-					 * valid time: "1w 5d" Example of invalid time: "1week 5 days"
+					 * The next thing we have to check is if they provided a valid time. 
+					 * We will use a method above to determine the time based on integers and units
+					 * Example of valid time: "1w 5d" Example of invalid time: "1week 5 days"
 					 */
 					Long time = this.determineTime(args);
 					if (time != null) {
